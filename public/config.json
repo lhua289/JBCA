@@ -1,0 +1,74 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData": {
+        "icon": "images/icon.png",
+        "iconSmall": "images/iconSmall.png",
+        "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+        "en-US": {
+            "name": "JBCA by VN ",
+          "description": "A Template for a custom Journey Builder activity",
+          "step1Label": "Configure Activity"
+        }
+    },
+    "arguments": {
+        "execute": {
+           "inArguments":[
+				{
+                    "discount": "10"
+                }									
+			],
+          "outArguments": [],
+          "url": "https://39cbfc11469a.ngrok.io/journeybuilder/execute",
+           "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": true,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+      "applicationExtensionKey": "78ef675b-c6cd-4bde-b5d1-feb8590f2bcb",
+      "save": {
+        "url": "https://39cbfc11469a.ngrok.io/journeybuilder/save",
+          "verb": "POST",
+        "useJwt": false
+       },
+       "publish": {
+        "url": "https://39cbfc11469a.ngrok.io/journeybuilder/publish",
+           "verb": "POST",
+        "useJwt": false
+       },
+      "stop": {
+        "url": "https://39cbfc11469a.ngrok.io/journeybuilder/stop",
+           "verb": "POST",
+        "useJwt": false
+      },
+      "validate": {
+        "url": "https://39cbfc11469a.ngrok.io/journeybuilder/validate",
+        "verb": "POST",
+        "useJwt": false
+      }
+    },
+    "wizardSteps": [
+        { "label": "Configure Activity", "key": "step1" }
+    ],
+    "userInterfaces": {
+        "configModal": {
+            "height": 400,
+            "width": 1000,
+          "fullscreen": false
+        }
+    },
+    "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [],
+                "outArguments": []
+            }
+        }
+    }
+}
