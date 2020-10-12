@@ -17,7 +17,7 @@
         "execute": {
            "inArguments":[
 				{
-                    "discount": "10"
+                    "contactkey": "Contact.Attribute.Merkle_JBAC.contactid"
                 }									
 			],
           "outArguments": [],
