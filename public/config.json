@@ -8,7 +8,7 @@
     "type": "REST",
     "lang": {
         "en-US": {
-            "name": "JBCA by VN ",
+            "name": "JBCA",
           "description": "A Template for a custom Journey Builder activity",
           "step1Label": "Configure Activity"
         }
@@ -21,7 +21,7 @@
                 }									
 			],
           "outArguments": [],
-          "url": "https://39cbfc11469a.ngrok.io/journeybuilder/execute",
+          "url": "https://jbca-test.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -33,24 +33,24 @@
     "configurationArguments": {
       "applicationExtensionKey": "78ef675b-c6cd-4bde-b5d1-feb8590f2bcb",
       "save": {
-        "url": "https://39cbfc11469a.ngrok.io/journeybuilder/save",
+        "url": "https://jbca-test.herokuapp.com/journeybuilder/save",
           "verb": "POST",
-        "useJwt": false
+        "useJwt": true
        },
        "publish": {
-        "url": "https://39cbfc11469a.ngrok.io/journeybuilder/publish",
+        "url": "https://jbca-test.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
-        "useJwt": false
+        "useJwt": true
        },
       "stop": {
-        "url": "https://39cbfc11469a.ngrok.io/journeybuilder/stop",
+        "url": "https://jbca-test.herokuapp.com/journeybuilder/stop",
            "verb": "POST",
-        "useJwt": false
+        "useJwt": true
       },
       "validate": {
-        "url": "https://39cbfc11469a.ngrok.io/journeybuilder/validate",
+        "url": "https://jbca-test.herokuapp.com/journeybuilder/validate",
         "verb": "POST",
-        "useJwt": false
+        "useJwt": true
       }
     },
     "wizardSteps": [
