@@ -87,12 +87,12 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             var decodedArgs1 = decoded.inArguments[0].id;
-            var decodedArgs2 = decoded.inArguments[0].contact.key;
+            // var decodedArgs2 = decoded.inArguments[0].contact.key;
             // logData(req);
             // res.send(200, 'Execute');
             console.log('decodedArgs',decodedArgs);
             console.log('decodedArgs1',decodedArgs1);
-            console.log('decodedArgs2',decodedArgs2);
+            // console.log('decodedArgs2',decodedArgs2);
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
