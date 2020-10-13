@@ -16,9 +16,7 @@
     "arguments": {
         "execute": {
            "inArguments":[
-				{
-                    "contactkey": "Contact.Attribute.Merkle_JBAC.contactid"
-                }									
+				{"ContactKey": "{{Contact.Key}}"}									
 			],
           "outArguments": [],
           "url": "https://jbca-test.herokuapp.com/journeybuilder/execute",
@@ -66,7 +64,7 @@
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [],
+                "inArguments": [{"contactkey": "Contact.Attribute.Merkle_JBAC.contactid"}	],
                 "outArguments": []
             }
         }
