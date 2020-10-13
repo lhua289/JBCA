@@ -85,14 +85,10 @@ exports.execute = function (req, res) {
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
             // decoded in arguments
-            var decodedArgs = decoded.inArguments[0];
-            var decodedArgs2 = decoded.inArguments[1];
-            var decodedArgs3 = decoded.outArguments[1];
+            var decodedArgs = decoded.inArguments[0].contactid;
             // logData(req);
             // res.send(200, 'Execute');
             console.log('decodedArgs1',decodedArgs);
-            console.log('decodedArgs2',decodedArgs2);
-            console.log('decodedArgs3',decodedArgs3);
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
