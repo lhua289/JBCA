@@ -56,8 +56,6 @@ app.post('/journeybuilder/execute/', function (req, res) {
             // var decodedArgs2 = decoded.inArguments[0].contact.key;
             // logData(req);
             // res.send(200, 'Execute');
-            console.log('decodedArgs',decodedArgs);
-            console.log('decodedArgs1',decodedArgs1);
             console.log("=======decoded-KEYVALUE========", decoded.keyValue);
 
         } else {
