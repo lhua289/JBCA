@@ -57,6 +57,7 @@ define([
     }
 
     function onGetTokens(tokens) {
+        console.log("onGetTokens function");
         console.log(tokens);
         authTokens = tokens;
     }
@@ -71,7 +72,7 @@ define([
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            "contactid": "{{Contact.Attribute.Merkle_JBAC.contactid}}"
+            "ContactKey": "aaaaaaa"
         }];
         
         payload['metaData'].isConfigured = true;
