@@ -71,7 +71,7 @@ define([
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            "ContactKey": "{{Contact.Key}}"
+            "contactid": "{{Contact.Attribute.Merkle_JBAC.contactid}}"
         }];
         
         payload['metaData'].isConfigured = true;
