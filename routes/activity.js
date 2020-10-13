@@ -72,10 +72,11 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-    console.log("Request to Execute function:" , logData(req));
 
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+
+        console.log("=======decoded========", decoded);
 
         // verification error -> unauthorized request
         if (err) {
