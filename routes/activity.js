@@ -76,8 +76,6 @@ exports.execute = function (req, res) {
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
-        console.log("=======decoded-KEYVALUE========", decoded.keyValue);
-
         // verification error -> unauthorized request
         if (err) {
             console.error(err);
@@ -88,13 +86,14 @@ exports.execute = function (req, res) {
             
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
-            var decodedArgs1 = decoded.inArguments[0].ContactKey;
+            var decodedArgs1 = decoded.outArguments[0];
             // var decodedArgs2 = decoded.inArguments[0].contact.key;
             // logData(req);
             // res.send(200, 'Execute');
             console.log('decodedArgs',decodedArgs);
             console.log('decodedArgs1',decodedArgs1);
-            // console.log('decodedArgs2',decodedArgs2);
+            console.log("=======decoded-KEYVALUE========", decoded.keyValue);
+
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
