@@ -88,7 +88,7 @@ exports.execute = function (req, res) {
             var decodedArgs = decoded.inArguments[0].contactid;
             // logData(req);
             // res.send(200, 'Execute');
-            console.log('decodedArgs1',decodedArgs);
+            console.log('decodedArgs',decodedArgs);
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
