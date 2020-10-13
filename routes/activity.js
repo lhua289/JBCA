@@ -86,7 +86,7 @@ exports.execute = function (req, res) {
             
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
-            var decodedArgs1 = decoded.inArguments[0].id;
+            var decodedArgs1 = decoded.inArguments[0].contactid;
             // var decodedArgs2 = decoded.inArguments[0].contact.key;
             // logData(req);
             // res.send(200, 'Execute');
