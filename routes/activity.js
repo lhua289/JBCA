@@ -71,39 +71,39 @@ exports.save = function (req, res) {
 /*
  * POST Handler for /execute/ route of Activity.
  */
-// exports.execute = function (req, res) {
+exports.execute = function (req, res) {
 
-//     // example on how to decode JWT
-//     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+    // example on how to decode JWT
+    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
-//         // verification error -> unauthorized request
-//         if (err) {
-//             console.error(err);
-//             return res.status(401).end();
-//         }
+        // verification error -> unauthorized request
+        if (err) {
+            console.error(err);
+            return res.status(401).end();
+        }
 
-//         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
+        if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
-//             // decoded in arguments
-//             var decodedArgs = decoded.inArguments[0];
-//             var decodedArgs1 = decoded.outArguments[0];
-//             // var decodedArgs2 = decoded.inArguments[0].contact.key;
-//             // logData(req);
-//             // res.send(200, 'Execute');
-//             console.log('decodedArgs',decodedArgs);
-//             console.log('decodedArgs1',decodedArgs1);
-//             console.log("=======decoded-KEYVALUE========", decoded.keyValue);
+            // decoded in arguments
+            var decodedArgs = decoded.inArguments[0];
+            var decodedArgs1 = decoded.outArguments[0];
+            // var decodedArgs2 = decoded.inArguments[0].contact.key;
+            // logData(req);
+            // res.send(200, 'Execute');
+            console.log('decodedArgs',decodedArgs);
+            console.log('decodedArgs1',decodedArgs1);
+            console.log("=======decoded-KEYVALUE========", decoded.keyValue);
 
-//         } else {
-//             console.error('inArguments invalid.');
-//             return res.status(400).end();
-//         }
-//     });
+        } else {
+            console.error('inArguments invalid.');
+            return res.status(400).end();
+        }
+    });
     
-//     // console.log(req.body.length);
-//     // console.log(JSON.stringify(req.body.length));
+    // console.log(req.body.length);
+    // console.log(JSON.stringify(req.body.length));
     
-// };
+};
 
 
 /*

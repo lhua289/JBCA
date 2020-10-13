@@ -37,37 +37,7 @@ app.post('/logout', routes.logout );
 app.post('/journeybuilder/save/', activity.save );
 app.post('/journeybuilder/validate/', activity.validate );
 app.post('/journeybuilder/publish/', activity.publish );
-app.post('/journeybuilder/execute/', function (req, res) {
-
-    // example on how to decode JWT
-    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
-
-        // verification error -> unauthorized request
-        if (err) {
-            console.error(err);
-            return res.status(401).end();
-        }
-
-        if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-            
-            // decoded in arguments
-            var decodedArgs = decoded.inArguments[0];
-            var decodedArgs1 = decoded.outArguments[0];
-            // var decodedArgs2 = decoded.inArguments[0].contact.key;
-            // logData(req);
-            // res.send(200, 'Execute');
-            console.log("=======decoded-KEYVALUE========", decoded.keyValue);
-
-        } else {
-            console.error('inArguments invalid.');
-            return res.status(400).end();
-        }
-    });
-    
-    // console.log(req.body.length);
-    // console.log(JSON.stringify(req.body.length));
-    
-});
+app.post('/journeybuilder/execute/', activity.execute );
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
