@@ -9,7 +9,7 @@ var path        = require('path');
 var request     = require('request');
 var routes      = require('./routes');
 var activity    = require('./routes/activity');
-const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
+// const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 var app = express();
 
 // Configure Express
@@ -40,5 +40,5 @@ app.post('/journeybuilder/publish/', activity.publish );
 app.post('/journeybuilder/execute/', activity.execute );
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+  console.log('port ' + app.get('port'));
 });
