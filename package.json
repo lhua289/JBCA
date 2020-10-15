@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/devsutd/journey-builder-activity-template#readme",
   "dependencies": {
+    "axios": "^0.20.0",
     "body-parser": "^1.19.0",
     "bower": "^1.8.0",
     "errorhandler": "^1.5.0",
