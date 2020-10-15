@@ -69,10 +69,10 @@ define([
     function save() {
         var postcardURLValue = $('#postcard-url').val();
         var postcardTextValue = $('#postcard-text').val();
-        var senderName = $("#comment").val();
-        console.log('postcardURLValue : ' + postcardURLValue);
-        console.log('postcardTextValue : ' + postcardTextValue);
-        console.log('senderName : ' + senderName);
+        // var senderName = $("#comment").val();
+        // console.log('postcardURLValue : ' + postcardURLValue);
+        // console.log('postcardTextValue : ' + postcardTextValue);
+        // console.log('senderName : ' + senderName);
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "ContactKey": "aaaaaaa"
