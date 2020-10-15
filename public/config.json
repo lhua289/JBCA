@@ -9,16 +9,13 @@
     "lang": {
         "en-US": {
             "name": "JBCA",
-          "description": "A Template for a custom Journey Builder activity",
+          "description": "A custom Journey Builder activity",
           "step1Label": "Configure Activity"
         }
     },
     "arguments": {
       "execute": {
           "inArguments": [
-              {
-                  "contactIdentifier": "aaa"
-              }
           ],
           "outArguments": [],
           "url": "https://jbca-test.herokuapp.com/journeybuilder/execute",
@@ -31,7 +28,7 @@
       }
   },
     "configurationArguments": {
-      "applicationExtensionKey": "78ef675b-c6cd-4bde-b5d1-feb8590f2bcb",
+      "applicationExtensionKey": "477d04c1-4513-431b-ba2e-62649b46022d",
       "save": {
         "url": "https://jbca-test.herokuapp.com/journeybuilder/save",
           "verb": "POST",
@@ -66,7 +63,7 @@
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [{"ContactKey": "Contact.Attribute.Merkle_JBAC.contactid"}	],
+                "inArguments": [],
                 "outArguments": []
             }
         }
