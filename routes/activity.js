@@ -73,10 +73,10 @@ exports.save = function (req, res) {
 /*
  * POST Handler for /execute/ route of Activity.
  */
-exports.execute = function (req, res) {
+// exports.execute = function (req, res) {
     var keyValue = '8509908153357152672'
     console.log("=======decoded-KEYVALUE========", keyValue);
-    console.log('senderName : ' + senderName);
+    // console.log('senderName : ' + senderName);
     
 
     // example on how to decode JWT
