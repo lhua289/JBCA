@@ -76,7 +76,7 @@ define([
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "ContactKey": "aaaaaaa",
-            "senderName": "ababab",
+            "senderName": senderName
         }];
         
         payload['metaData'].isConfigured = true;
