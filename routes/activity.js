@@ -76,19 +76,8 @@ exports.save = function (req, res) {
 exports.execute = function (req, res) {
     var keyValue = '8509908153357152672'
     console.log("=======decoded-KEYVALUE========", keyValue);
-    // console.log('senderName : ' + senderName);
-    // axios({
-    //     method: 'post',
-    //     url: 'https://openapi.zalo.me/v2.0/oa/message?access_token=yNtFBRaj1c7wTCeYiom7OV1yoIcpCdyui63XTwzXLrNcSzr_sqeIFCbRhNJLTpbsa4AjGgzz7toe99GmZGqY1ujQfWkjR14MXKsXMOrREbcB3Pn7mZmZOkCrh5_9B09KydMdV-ud6LFQDB5pc0igIjmIeWATH6iFsalv1ln0G0-zQDeXWtbsCAGgmZw1Cbabb6RTBhP4Q1QFGzLUbqvk7OL5yGkjVpukcM-pOev5FbABVUzbebLRNfnnucYrQ4v6gqFURR9yPaRwJ-uEnKPL6iHV_p65JZfxS63yUh8p060',
-    //     data: {
-    //         "recipient": {
-    //           "user_id": keyValue
-    //         },
-    //         "message":{
-    //           "text":"Chào mừng bạn đến với keyValue"
-    //         }
-    //       }
-    //   });
+    console.log('senderName : ' + senderName);
+    
 
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
@@ -104,14 +93,26 @@ exports.execute = function (req, res) {
             
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0].senderName;
-            var decodedArgs1 = decoded.outArguments[0];
+            // var decodedArgs1 = decoded.outArguments[0];
             // var decodedArgs2 = decoded.inArguments[0].contact.key;
             // logData(req);
             // res.send(200, 'Execute');
             // console.log('decodedArgs',decodedArgs);
-            console.log('decodedArgs',decodedArgs);
+            // console.log('decodedArgs',decodedArgs);
+
             // console.log('decodedArgs1',decodedArgs1);
-            
+            axios({
+                method: 'post',
+                url: 'https://openapi.zalo.me/v2.0/oa/message?access_token=yNtFBRaj1c7wTCeYiom7OV1yoIcpCdyui63XTwzXLrNcSzr_sqeIFCbRhNJLTpbsa4AjGgzz7toe99GmZGqY1ujQfWkjR14MXKsXMOrREbcB3Pn7mZmZOkCrh5_9B09KydMdV-ud6LFQDB5pc0igIjmIeWATH6iFsalv1ln0G0-zQDeXWtbsCAGgmZw1Cbabb6RTBhP4Q1QFGzLUbqvk7OL5yGkjVpukcM-pOev5FbABVUzbebLRNfnnucYrQ4v6gqFURR9yPaRwJ-uEnKPL6iHV_p65JZfxS63yUh8p060',
+                data: {
+                    "recipient": {
+                      "user_id": decoded.keyValue
+                    },
+                    "message":{
+                      "text": decodedArgs
+                    }
+                  }
+              }); 
 
         } else {
             console.error('inArguments invalid.');
