@@ -75,7 +75,7 @@ exports.save = function (req, res) {
  */
 exports.execute = function (req, res) {
     // var keyValue = '8509908153357152672'
-    // console.log("=======decoded-KEYVALUE========", keyValue);
+    console.log("=======decoded-KEYVALUE========", keyValue);
     // console.log('senderName : ' + senderName);
     // axios({
     //     method: 'post',
