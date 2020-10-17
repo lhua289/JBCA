@@ -49,7 +49,7 @@ define([
             //   console.log(val);
             });
         });
-        console.log(inArgument.senderName);
+        console.log(inArguments.senderName);
 
         connection.trigger('updateButton', {
             button: 'next',
