@@ -86,7 +86,7 @@ define([
             "tokens": authTokens,
             "ContactKey": "aaaaaaa",
             "senderName": senderName,
-            "contactid": contactid
+            "contactid": "{{Contact.Attribute.jbca_2.contactid}}"
         }];
         
         payload['metaData'].isConfigured = true;
