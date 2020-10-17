@@ -46,7 +46,7 @@ define([
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
                 if (key === 'senderName') {
-                    console.log(val);
+                    $("#comment").html(val);
                 }
                 
             });
