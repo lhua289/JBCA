@@ -66,7 +66,7 @@ exports.save = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
     // logData(req);
-    // res.send(200, 'Save');
+    res.send(200, 'Save');
     
 
 };
@@ -75,11 +75,11 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-    var keyValue = '8509908153357152672'
-    console.log("=======decoded-KEYVALUE========", keyValue);
+    // var keyValue = '8509908153357152672'
+    // console.log("=======decoded-KEYVALUE========", keyValue);
     // console.log('senderName : ' + senderName);
     
-
+    // logData(req);
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
        
@@ -120,7 +120,7 @@ exports.execute = function (req, res) {
             return res.status(400).end();
         }
     });
-    logData(req);
+    
     // console.log(req.body.length);
     // console.log(JSON.stringify(req.body.length));
     
