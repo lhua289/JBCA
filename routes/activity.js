@@ -65,7 +65,7 @@ exports.edit = function (req, res) {
 exports.save = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
-    logData(req);
+    // logData(req);
     // res.send(200, 'Save');
     
 
@@ -120,7 +120,7 @@ exports.execute = function (req, res) {
             return res.status(400).end();
         }
     });
-    
+    logData(req);
     // console.log(req.body.length);
     // console.log(JSON.stringify(req.body.length));
     

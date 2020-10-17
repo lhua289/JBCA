@@ -88,7 +88,7 @@ define([
         }];
         
         payload['metaData'].isConfigured = true;
-        console.log('*** Schema ***', JSON.stringify(data['schema']));
+        // console.log('*** Schema ***', JSON.stringify(data['schema']));
         console.log(payload);
         connection.trigger('updateActivity', payload);
     }
