@@ -15,6 +15,10 @@ define([
     connection.on('requestedEndpoints', onGetEndpoints);
 
     connection.on('clickedNext', save);
+    connection.on('requestedSchema', function (data) {
+        // save schema
+        console.log('*** Schema ***', JSON.stringify(data['schema']));
+     });
    
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
@@ -40,7 +44,7 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        console.log('inArguments',inArguments);
+        // console.log('inArguments',inArguments);
         // console.log('inArguments222',inArguments.[2]);
 
         $.each(inArguments, function (index, inArgument) {
@@ -85,7 +89,7 @@ define([
         
         payload['metaData'].isConfigured = true;
 
-        // console.log(payload);
+        console.log(payload);
         connection.trigger('updateActivity', payload);
     }
 
