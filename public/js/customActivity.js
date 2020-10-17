@@ -8,7 +8,7 @@ define([
     var connection = new Postmonger.Session();
     var authTokens = {};
     var payload = {};
-    var contactid = {} ;
+    var contactid = {};
     $(window).ready(onRender);
 
     connection.on('initActivity', initialize);
@@ -90,7 +90,7 @@ define([
         }];
         
         payload['metaData'].isConfigured = true;
-        console.log('*** Schema ***', JSON.stringify(data['schema']));
+        // console.log('*** Schema ***', JSON.stringify(data['schema']));
         console.log(payload);
         connection.trigger('updateActivity', payload);
     }
