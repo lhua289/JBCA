@@ -13,7 +13,10 @@ define([
     connection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
-
+    connection.on('requestedSchema', function (data) {
+        // save schema
+        console.log('*** Schema ***', JSON.stringify(data['schema']));
+     });
     connection.on('clickedNext', save);
     
    
@@ -81,7 +84,8 @@ define([
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "ContactKey": "aaaaaaa",
-            "senderName": senderName
+            "senderName": senderName,
+            "contactid": contactid
         }];
         
         payload['metaData'].isConfigured = true;

@@ -16,6 +16,9 @@
     "arguments": {
       "execute": {
           "inArguments": [
+            {
+              "contactid": "{{Contact.Attribute.jbca_2.contactid}}"
+           }		
           ],
           "outArguments": [],
           "url": "https://jbca-test.herokuapp.com/journeybuilder/execute",
