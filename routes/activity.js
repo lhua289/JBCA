@@ -79,11 +79,11 @@ exports.execute = function (req, res) {
     // console.log("=======decoded-KEYVALUE========", keyValue);
     // console.log('senderName : ' + senderName);
     
-    console.log( req.body );
+    
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
        
-        
+        console.log( req.body );
         // verification error -> unauthorized request
         if (err) {
             console.error(err);
