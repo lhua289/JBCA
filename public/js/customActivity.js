@@ -45,11 +45,13 @@ define([
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
-                
-            //   console.log(val);
+                if (key === 'senderName') {
+                    message = val;
+                }
+                console.log(message);
             });
         });
-        console.log(inArguments.senderName);
+        
 
         connection.trigger('updateButton', {
             button: 'next',
