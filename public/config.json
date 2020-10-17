@@ -17,7 +17,9 @@
       "execute": {
           "inArguments": [
             {
-              "contactid": "{{Contact.Attribute.jbca_2.contactid}}"
+              "contactid": "{{Contact.Attribute.jbca_2.contactid}}" ,
+              "FirstName": "{{Contact.Attribute.jbca_2.FirstName}}" ,
+              "LastName": "{{Contact.Attribute.jbca_2.LastName}}" 
            }		
           ],
           "outArguments": [],

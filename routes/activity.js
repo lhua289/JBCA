@@ -95,13 +95,18 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0].senderName;
             var contactid = decoded.inArguments[0].contactid;
+            var FirstName = decoded.inArguments[0].FirstName;
+            var LastName = decoded.inArguments[0].LastName;
 
+            console.log('contactid',contactid);
+            console.log('FirstName',FirstName);
+            console.log('LastName',LastName);
             // var decodedArgs1 = decoded.outArguments[0];
             // var decodedArgs2 = decoded.inArguments[0].contact.key;
             // logData(req);
             // res.send(200, 'Execute');
             // console.log('decodedArgs',decodedArgs);
-            console.log('contactid',contactid);
+            
 
             // console.log('decodedArgs1',decodedArgs1);
             axios({
