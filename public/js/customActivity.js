@@ -15,10 +15,7 @@ define([
     connection.on('requestedEndpoints', onGetEndpoints);
 
     connection.on('clickedNext', save);
-    connection.on('requestedSchema', function (data) {
-        // save schema
-        console.log('*** Schema ***', JSON.stringify(data['schema']));
-     });
+    
    
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
