@@ -46,9 +46,9 @@ define([
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
                 if (key === 'senderName') {
-                    message = val;
+                    console.log(val);
                 }
-                console.log(message);
+                
             });
         });
         
