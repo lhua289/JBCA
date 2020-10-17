@@ -40,15 +40,16 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        console.log('inArguments',inArguments);
+        // console.log('inArguments',inArguments);
         // console.log('inArguments222',inArguments.[2]);
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
                 
-              console.log(val);
+            //   console.log(val);
             });
         });
+        console.log(inArgument.senderName);
 
         connection.trigger('updateButton', {
             button: 'next',
