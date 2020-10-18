@@ -99,7 +99,7 @@ exports.execute = function (req, res) {
             var subStr = decodedArgs.match("%%(.*)%%");
             
             // if ( subStr[1] = "FirstName") {
-                var messText =   decodedArgs.replace(subStr[1], FirstName);
+                var messText =   (decodedArgs.replace(subStr[1], FirstName)).replace("%%", "");
             // }
             console.log('subStr',messText);
             // Call Zalo API
