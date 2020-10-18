@@ -75,14 +75,8 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-    // var keyValue = '8509908153357152672'
-    // console.log("=======decoded-KEYVALUE========", keyValue);
-    // console.log('senderName : ' + senderName);
-    
-    
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
-       
         
         // verification error -> unauthorized request
         if (err) {
@@ -101,14 +95,14 @@ exports.execute = function (req, res) {
             console.log('contactid',contactid);
             console.log('FirstName',FirstName);
             console.log('LastName',LastName);
-            // var decodedArgs1 = decoded.outArguments[0];
-            // var decodedArgs2 = decoded.inArguments[0].contact.key;
-            // logData(req);
-            // res.send(200, 'Execute');
-            // console.log('decodedArgs',decodedArgs);
-            
 
-            // console.log('decodedArgs1',decodedArgs1);
+            var myStr = $("#comment").val();
+            var subStr = decodedArgs.match("%%(.*)%%");
+            if ( subStr[1] = "FirstName") {
+                myStr.replace(subStr[1], FirstName);
+            }
+
+            // Call Zalo API
             axios({
                 method: 'post',
                 url: 'https://openapi.zalo.me/v2.0/oa/message?access_token=DY9F3XRGLmyzAqe17D5M3pSZIGeSpr9ySJqF6IsuGsH080WB3ffGJsKmIayEloKjJnD5IpQRMXfV6nvY7xfID3ym5p9knLDt9quh1sxXH5KTGJm5V_13O19RDn9pgdD6NYOpE2stRaXM7Gv99gaQHtGzTIPPd1945NDU5ahd141YPrm56VqfUcLsL28CnHrxIsD28ol9MtDNO2mt0_DCIt1-EGGOY5C6OYrELnMg0J1l0sTpGl8ZB0C9QaD8XX549nrPDXAG8LPTPpyu5EbeEpqI96vik3jf6C8jDntEKGu',
@@ -139,8 +133,6 @@ exports.execute = function (req, res) {
  */
 exports.publish = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
-    // logData(req);
     res.send(200, 'Publish');
 };
 
@@ -149,7 +141,5 @@ exports.publish = function (req, res) {
  */
 exports.validate = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
-    // logData(req);
     res.send(200, 'Validate');
 };
