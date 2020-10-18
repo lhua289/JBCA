@@ -96,10 +96,9 @@ exports.execute = function (req, res) {
             console.log('FirstName',FirstName);
             console.log('LastName',LastName);
 
-            var myStr = $("#comment").val();
             var subStr = decodedArgs.match("%%(.*)%%");
             if ( subStr[1] = "FirstName") {
-                myStr.replace(subStr[1], FirstName);
+                decodedArgs.replace(subStr[1], FirstName);
             }
 
             // Call Zalo API
