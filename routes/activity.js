@@ -101,7 +101,7 @@ exports.execute = function (req, res) {
             if ( subStr[1] = "FirstName") {
                 var zaloMessage =   (message.replace(subStr[1], FirstName)).replace(/%%/g, "");
             }
-            console.log('subStr',messText);
+            console.log('subStr',zaloMessage);
             // Call Zalo API
             axios({
                 method: 'post',
