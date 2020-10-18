@@ -87,7 +87,7 @@ exports.execute = function (req, res) {
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
             // decoded in arguments
-            var decodedArgs = decoded.inArguments[0].senderName;
+            var message = decoded.inArguments[0].message;
             var contactid = decoded.inArguments[0].contactid;
             var FirstName = decoded.inArguments[0].FirstName;
             var LastName = decoded.inArguments[0].LastName;
@@ -96,10 +96,10 @@ exports.execute = function (req, res) {
             console.log('FirstName',FirstName);
             console.log('LastName',LastName);
 
-            var subStr = decodedArgs.match("%%(.*)%%");
+            var subStr = message.match("%%(.*)%%");
             
             if ( subStr[1] = "FirstName") {
-                var messText =   (decodedArgs.replace(subStr[1], FirstName)).replace(/%%/g, "");
+                var zaloMessage =   (message.replace(subStr[1], FirstName)).replace(/%%/g, "");
             }
             console.log('subStr',messText);
             // Call Zalo API
@@ -111,7 +111,7 @@ exports.execute = function (req, res) {
                       "user_id": contactid
                     },
                     "message":{
-                      "text": messText
+                      "text": zaloMessage
                     }
                   }
               }); 

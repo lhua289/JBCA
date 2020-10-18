@@ -16,7 +16,7 @@ define([
     connection.on('requestedEndpoints', onGetEndpoints);
     connection.on('requestedSchema', function (data) {
         // save schema
-        console.log('*** Schema ***', JSON.stringify(data['schema']));
+        // console.log('*** Schema ***', JSON.stringify(data['schema']));
      });
     connection.on('clickedNext', save);
     
@@ -45,13 +45,10 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        // console.log('inArguments',inArguments);
-        // console.log('inArguments222',inArguments.[2]);
-
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
-                if (key === 'senderName') {
-                    $("#comment").html(val);
+                if (key === 'message') {
+                    $("#message").html(val);
                 }
                 
             });
@@ -78,14 +75,14 @@ define([
     function save() {
         var postcardURLValue = $('#postcard-url').val();
         var postcardTextValue = $('#postcard-text').val();
-        var senderName = $("#comment").val();
+        var message = $("#message").val();
         // console.log('postcardURLValue : ' + postcardURLValue);
         // console.log('postcardTextValue : ' + postcardTextValue);
         // console.log('senderName : ' + senderName);
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "ContactKey": "aaaaaaa",
-            "senderName": senderName,
+            "message": message,
             "contactid": "{{Contact.Attribute.jbca_2.contactid}}" ,
             "FirstName": "{{Contact.Attribute.jbca_2.FirstName}}",
             "LastName": "{{Contact.Attribute.jbca_2.LastName}}"
@@ -93,7 +90,7 @@ define([
         
         payload['metaData'].isConfigured = true;
         // console.log('*** Schema ***', JSON.stringify(data['schema']));
-        console.log(payload);
+        // console.log(payload);
         connection.trigger('updateActivity', payload);
     }
 
