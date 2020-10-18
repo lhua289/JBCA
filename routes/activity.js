@@ -97,11 +97,11 @@ exports.execute = function (req, res) {
             console.log('LastName',LastName);
 
             var subStr = decodedArgs.match("%%(.*)%%");
-            console.log('subStr',subStr);
+            
             // if ( subStr[1] = "FirstName") {
-                decodedArgs.replace(subStr[1], FirstName);
+                var messText =   decodedArgs.replace(subStr[1], FirstName);
             // }
-
+            console.log('subStr',messText);
             // Call Zalo API
             axios({
                 method: 'post',
@@ -111,7 +111,7 @@ exports.execute = function (req, res) {
                       "user_id": decoded.keyValue
                     },
                     "message":{
-                      "text": decodedArgs
+                      "text": messText
                     }
                   }
               }); 
