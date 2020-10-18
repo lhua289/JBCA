@@ -98,9 +98,9 @@ exports.execute = function (req, res) {
 
             var subStr = decodedArgs.match("%%(.*)%%");
             console.log('subStr',subStr);
-            if ( subStr[1] = "FirstName") {
+            // if ( subStr[1] = "FirstName") {
                 decodedArgs.replace(subStr[1], FirstName);
-            }
+            // }
 
             // Call Zalo API
             axios({
