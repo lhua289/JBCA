@@ -108,7 +108,7 @@ exports.execute = function (req, res) {
                 url: 'https://openapi.zalo.me/v2.0/oa/message?access_token=DY9F3XRGLmyzAqe17D5M3pSZIGeSpr9ySJqF6IsuGsH080WB3ffGJsKmIayEloKjJnD5IpQRMXfV6nvY7xfID3ym5p9knLDt9quh1sxXH5KTGJm5V_13O19RDn9pgdD6NYOpE2stRaXM7Gv99gaQHtGzTIPPd1945NDU5ahd141YPrm56VqfUcLsL28CnHrxIsD28ol9MtDNO2mt0_DCIt1-EGGOY5C6OYrELnMg0J1l0sTpGl8ZB0C9QaD8XX549nrPDXAG8LPTPpyu5EbeEpqI96vik3jf6C8jDntEKGu',
                 data: {
                     "recipient": {
-                      "user_id": decoded.keyValue
+                      "user_id": contactid
                     },
                     "message":{
                       "text": messText
