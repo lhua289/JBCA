@@ -50,11 +50,3 @@ This guide covers Heroku, skip this step if you are familiar on how to deploy a 
 
 1. Login into Marketing Cloud and navigate to Journey Builder
 2. You should be able to see your custom activity and drag it into the canvas!
-
-#### Want to learn more?
-
-If you'd like to learn more about building custom Journey Builder Activities and our collection of Custom Activities available to you today, email us at [info@devsutd.com](mailto:info@devsutd.com)
-
-Also, follow us on [LinkedIn](https://www.linkedin.com/company/10701607/) to get the latest updates and great articles about Salesforce Marketing Cloud!
-"# jbca-test" 
-"# test-0002" 
