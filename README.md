@@ -7,7 +7,7 @@
 
 * Node.js (if you'd like to test locally)
 * A Marketing Cloud Account with Journey Builder
-* A publicly accessible web server (this template was built using a free [Heroku](https://heroku.com) account with SSL support
+* A publicly accessible web server (this template was built using a free [Heroku](https://jbca-test.herokuapp.com/) account with SSL support
 
 ### Getting Started
 
